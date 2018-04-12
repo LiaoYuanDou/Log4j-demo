@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<Configuration status="WARN">  
+    <Appenders>  
+        <Console name="Console" target="SYSTEM_OUT">  
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />  
+        </Console>  
+        <File name="TimFile" fileName="E:/logs/tim.log">  
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />  
+        </File>  
+    </Appenders>  
+    <Loggers>  
+        <Logger name="timlog" level="trace" additivity="true">  
+            <AppenderRef ref="TimFile" />  
+        </Logger>  
+        <Root level="trace">  
+            <AppenderRef ref="Console" />  
+        </Root>  
+    </Loggers>  
+</Configuration>  
